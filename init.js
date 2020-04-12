@@ -28,17 +28,16 @@ const ejer2 = () => {
 const ejer3 = () => {
     let size = 8;
     let divPrincipal = "#ejer-3";
-    var board = "";
     for (let i = 0; i < size; i++) {
         $(divPrincipal).append(`<span index='${i}'></span> `);
         for (let z = 0; z < size; z++) {
             if ((i + z) % 2 == 0) {
-                $(divPrincipal +"span[index="+i+"]").append(`<span index='${z}' >-</span> `);
+                $(divPrincipal + "span[index=" + i + "]").append(`<span index='${z}' >-</span> `);
             } else {
-                $(divPrincipal +`span[index='${i}']`).append(`<span index='${z}' >#</span> `);
+                $(divPrincipal + `span[index='${i}']`).append(`<span index='${z}' >#</span> `);
             }
         }
-        $(divPrincipal +`span[index='${i}']`).append("</br>");
+        $(divPrincipal + `span[index='${i}']`).append("</br>");
     }
     /* 
         $(`#ejer-3 span[index='${index}']`).append(`${pattern2}`)
@@ -53,6 +52,16 @@ const ejer3 = () => {
             }
             index2 = 0;
             index++; */
+};
+
+const ejer3 = (a, b) => {
+    if (a < b) {
+        return a;
+    } else if (a > b) {
+        return b;
+    } else {
+        return null;
+    }
 }
 
 
